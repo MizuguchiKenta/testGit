@@ -1,0 +1,58 @@
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\stkinit.obj
+-Input=DefaultBuild\r_main.obj
+-Input=DefaultBuild\r_systeminit.obj
+-Input=DefaultBuild\r_cg_cgc.obj
+-Input=DefaultBuild\r_cg_cgc_user.obj
+-Input=DefaultBuild\r_cg_adc.obj
+-Input=DefaultBuild\r_cg_adc_user.obj
+-Input=DefaultBuild\r_cg_port.obj
+-Input=DefaultBuild\r_cg_port_user.obj
+-Input=DefaultBuild\r_cg_intc.obj
+-Input=DefaultBuild\r_cg_intc_user.obj
+-Input=DefaultBuild\r_cg_timer.obj
+-Input=DefaultBuild\r_cg_timer_user.obj
+-Input=DefaultBuild\vacume.obj
+-Input=DefaultBuild\geefFlash.obj
+-Input=DefaultBuild\glbRam.obj
+-Input=DefaultBuild\sysmode.obj
+-Input=DefaultBuild\warm.obj
+-Input=DefaultBuild\course.obj
+-Input=DefaultBuild\stiInt.obj
+-Input=DefaultBuild\mainSVC.obj
+-Input=DefaultBuild\r_cg_pfdl.obj
+-Input=DefaultBuild\pdfl_user.obj
+-Input=DefaultBuild\r_cg_wdt.obj
+-Input=DefaultBuild\r_cg_wdt_user.obj
+-Input=DefaultBuild\r_cg_lvd.obj
+-Input=DefaultBuild\r_cg_lvd_user.obj
+-LIBrary="JP_R_FDL_RL78_T04_V1.05_CCRL_A_J\FDLRL78 Type04\V1.05\librl78\pfdl.lib"
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F100GJ.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\SVC.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78cm4s99.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78cm4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=3FE00-3FFFF
+-USER_OPT_BYTE=FF1DE9
+-LISt=DefaultBuild\SVC.map
+-SHow=SYmbol,Total_size
+-STARt=.const,.text,.RLIB,.SLIB,.textf,.constf,.data,.sdata,PFDL_COD/03000,.dataR,.bss/FAF88,.sdataR,.sbss/FFE20
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-Total_size
+-NOLOgo
+-end
+-Input=DefaultBuild\SVC.abs
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F100GJ.DVF
+-OUtput=DefaultBuild\SVC.mot
+-FOrm=Stype
+-NOMessage
+-exit
+

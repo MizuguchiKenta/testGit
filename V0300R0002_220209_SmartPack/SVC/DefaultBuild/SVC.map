@@ -1,0 +1,984 @@
+Renesas Optimizing Linker (V3.02.00 )             09-Feb-2022 15:30:18
+
+*** Options ***
+
+-MAKEUD=DefaultBuild\SVC.lk.ud
+-subcommand=DefaultBuild\SVC.clnk
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\stkinit.obj
+-Input=DefaultBuild\r_main.obj
+-Input=DefaultBuild\r_systeminit.obj
+-Input=DefaultBuild\r_cg_cgc.obj
+-Input=DefaultBuild\r_cg_cgc_user.obj
+-Input=DefaultBuild\r_cg_adc.obj
+-Input=DefaultBuild\r_cg_adc_user.obj
+-Input=DefaultBuild\r_cg_port.obj
+-Input=DefaultBuild\r_cg_port_user.obj
+-Input=DefaultBuild\r_cg_intc.obj
+-Input=DefaultBuild\r_cg_intc_user.obj
+-Input=DefaultBuild\r_cg_timer.obj
+-Input=DefaultBuild\r_cg_timer_user.obj
+-Input=DefaultBuild\vacume.obj
+-Input=DefaultBuild\geefFlash.obj
+-Input=DefaultBuild\glbRam.obj
+-Input=DefaultBuild\sysmode.obj
+-Input=DefaultBuild\warm.obj
+-Input=DefaultBuild\course.obj
+-Input=DefaultBuild\stiInt.obj
+-Input=DefaultBuild\mainSVC.obj
+-Input=DefaultBuild\r_cg_pfdl.obj
+-Input=DefaultBuild\pdfl_user.obj
+-Input=DefaultBuild\r_cg_wdt.obj
+-Input=DefaultBuild\r_cg_wdt_user.obj
+-Input=DefaultBuild\r_cg_lvd.obj
+-Input=DefaultBuild\r_cg_lvd_user.obj
+-LIBrary="JP_R_FDL_RL78_T04_V1.05_CCRL_A_J\FDLRL78 Type04\V1.05\librl78\pfdl.lib"
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F100GJ.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\SVC.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78cm4s99.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78cm4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=3FE00-3FFFF
+-USER_OPT_BYTE=FF1DE9
+-LISt=DefaultBuild\SVC.map
+-SHow=SYmbol,Total_size
+-STARt=.const,.text,.RLIB,.SLIB,.textf,.constf,.data,.sdata,PFDL_COD/03000,.dataR,.bss/FAF88,.sdataR,.sbss/FFE20
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-Total_size
+-NOLOgo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+.vect
+                                  00000000  0000007f        80   0
+.option_byte
+                                  000000c0  000000c3         4   1
+.security_id
+                                  000000c4  000000cd         a   1
+.monitor1
+                                  000000ce  000000d7         a   1
+.const
+                                  00003000  00003099        9a   2
+.text
+                                  0000309a  00003217       17e   1
+.RLIB
+                                  00003218  0000336b       154   1
+.SLIB
+                                  0000336c  0000336c         0   1
+.textf
+                                  0000336c  00007514      41a9   1
+.constf
+                                  00007516  00007516         0   2
+.data
+                                  00007516  0000766f       15a   2
+.sdata
+                                  00007670  00007670         0   2
+PFDL_COD
+                                  00007670  000076fd        8e   2
+.monitor2
+                                  0003fe00  0003ffff       200   1
+.dataR
+                                  000faf88  000fb0e1       15a   2
+.bss
+                                  000fb0e2  000fb248       167   2
+.sdataR
+                                  000ffe20  000ffe20         0   2
+.sbss
+                                  000ffe20  000ffe20         0   2
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  000002c1 Byte(s)
+ROMDATA SECTION:  0000048c Byte(s)
+PROGRAM SECTION:  00004509 Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=.vect
+FILE=rlink_generates_04
+                                  00000000  0000007f        80
+
+SECTION=.option_byte
+FILE=rlink_generates_01
+                                  000000c0  000000c3         4
+
+SECTION=.security_id
+FILE=rlink_generates_03
+                                  000000c4  000000cd         a
+
+SECTION=.monitor1
+FILE=rlink_generates_02
+                                  000000ce  000000d7         a
+
+SECTION=.const
+FILE=DefaultBuild\vacume.obj
+                                  00003000  0000302e        2f
+  _DefaultCourseData
+                                  00003000        20   data ,g         * 
+  _DefaultSystemData
+                                  00003020         f   data ,g         * 
+FILE=DefaultBuild\sysmode.obj
+                                  00003030  0000307b        4c
+  _Version
+                                  00003030         9   data ,g         * 
+  _Revision
+                                  00003039         9   data ,g         * 
+FILE=DefaultBuild\stiInt.obj
+                                  0000307c  0000308b        10
+FILE=DefaultBuild\mainSVC.obj
+                                  0000308c  00003099         e
+
+SECTION=.text
+FILE=DefaultBuild\cstart.obj
+                                  0000309a  000030ec        53
+  _start
+                                  0000309a         0   none ,g         * 
+  _exit
+                                  000030eb         0   none ,g         * 
+FILE=DefaultBuild\r_cg_intc_user.obj
+                                  000030ed  000031d4        e8
+  _r_intc6_interrupt@1
+                                  000030ed        e8   func ,l         * 
+FILE=DefaultBuild\r_cg_timer_user.obj
+                                  000031d5  000031ee        1a
+  _r_tau0_channel0_interrupt@1
+                                  000031d5        1a   func ,l         * 
+FILE=DefaultBuild\r_cg_wdt_user.obj
+                                  000031ef  00003215        27
+  _r_wdt_interrupt@1
+                                  000031ef        27   func ,l         * 
+FILE=DefaultBuild\r_cg_lvd_user.obj
+                                  00003216  00003217         2
+  _r_lvd_interrupt@1
+                                  00003216         2   func ,l         * 
+
+SECTION=.RLIB
+FILE=memcpy
+                                  00003218  00003228        11
+  _memcpy
+                                  00003218         0   none ,g         * 
+FILE=_COM_lmul
+                                  00003229  00003250        28
+  __COM_lmul
+                                  00003229         0   none ,g         * 
+FILE=_COM_sldiv
+                                  00003251  000032a2        52
+  __COM_sldiv
+                                  00003256         0   none ,g         * 
+FILE=_COM_uidiv
+                                  000032a3  000032cc        2a
+  __COM_uidiv
+                                  000032a5         0   none ,g         * 
+FILE=_COM_uirem
+                                  000032cd  000032f5        29
+  __COM_uirem
+                                  000032cd         0   none ,g         * 
+FILE=_COM_uldiv
+                                  000032f6  00003331        3c
+  __COM_uldiv
+                                  000032fb         0   none ,g         * 
+FILE=_COM_ulrem
+                                  00003332  0000336b        3a
+  __COM_ulrem
+                                  00003334         0   none ,g         * 
+
+SECTION=.textf
+FILE=DefaultBuild\stkinit.obj
+                                  0000336c  000033af        44
+  _stkinit
+                                  0000336c         0   none ,g         * 
+  LSTINIT1
+                                  0000337a         0   none ,l         * 
+  LSTINIT2
+                                  000033a4         0   none ,l         * 
+  LSTINIT3
+                                  000033af         0   none ,l         * 
+FILE=DefaultBuild\r_main.obj
+                                  000033b0  000033c4        15
+  _main
+                                  000033b0        11   func ,g         * 
+  _R_MAIN_UserInit
+                                  000033c1         4   func ,g         * 
+FILE=DefaultBuild\r_systeminit.obj
+                                  000033c5  00003424        60
+  _R_Systeminit
+                                  000033c5        59   func ,g         * 
+  _hdwinit
+                                  0000341e         7   func ,g         * 
+FILE=DefaultBuild\r_cg_cgc.obj
+                                  00003425  0000343b        17
+  _R_CGC_Create
+                                  00003425        17   func ,g         * 
+FILE=DefaultBuild\r_cg_cgc_user.obj
+                                  0000343c  00003442         7
+  _R_CGC_Get_ResetSource
+                                  0000343c         7   func ,g         * 
+FILE=DefaultBuild\r_cg_adc.obj
+                                  00003443  00003499        57
+  _R_ADC_Create
+                                  00003443        3c   func ,g         * 
+  _R_ADC_Start
+                                  0000347f         4   func ,g         * 
+  _R_ADC_Stop
+                                  00003483         4   func ,g         * 
+  _R_ADC_Set_OperationOn
+                                  00003487         4   func ,g         * 
+  _R_ADC_Set_OperationOff
+                                  0000348b         4   func ,g         * 
+  _R_ADC_Get_Result
+                                  0000348f         b   func ,g         * 
+FILE=DefaultBuild\r_cg_port.obj
+                                  0000349a  000034d9        40
+  _R_PORT_Create
+                                  0000349a        40   func ,g         * 
+FILE=DefaultBuild\r_cg_intc.obj
+                                  000034da  00003532        59
+  _R_INTC_Create
+                                  000034da        4b   func ,g         * 
+  _R_INTC6_Start
+                                  00003525         7   func ,g         * 
+  _R_INTC6_Stop
+                                  0000352c         7   func ,g         * 
+FILE=DefaultBuild\r_cg_timer.obj
+                                  00003533  00003658       126
+  _R_TAU0_Create
+                                  00003533        e0   func ,g         * 
+  _R_TAU0_Channel0_Start
+                                  00003613        10   func ,g         * 
+  _R_TAU0_Channel0_Stop
+                                  00003623        10   func ,g         * 
+  _R_TAU0_Channel2_Start
+                                  00003633        13   func ,g         * 
+  _R_TAU0_Channel2_Stop
+                                  00003646        13   func ,g         * 
+FILE=DefaultBuild\vacume.obj
+                                  00003659  00003f9f       947
+  _mainDriveMode
+                                  00003659        6c   func ,g         * 
+  _DriveStartMode
+                                  000036c5        54   func ,g         * 
+  _VacuumPullMode
+                                  00003719       1d9   func ,g         * 
+  _GusInclusionMode
+                                  000038f2        6b   func ,g         * 
+  _GusStubilityMode
+                                  0000395d        28   func ,g         * 
+  _SeelMode
+                                  00003985       17f   func ,g         * 
+  _SeelHeaterBlockWait
+                                  00003b04        5d   func ,g         * 
+  _SeelCoolingMode
+                                  00003b61        bf   func ,g         * 
+  _DriveEndMode
+                                  00003c20        70   func ,g         * 
+  _VacuumSetWaitMode
+                                  00003c90        88   func ,g         * 
+  _VacuumEndControl
+                                  00003d18        27   func ,g         * 
+  _VacuumStopMode
+                                  00003d3f        c9   func ,g         * 
+  _VacuumStart
+                                  00003e08        2b   func ,g         * 
+  _VacuumAllStop
+                                  00003e33        72   func ,g         * 
+  _VacuumEmergencyStop
+                                  00003ea5        1f   func ,g         * 
+  _DrawerSwRead
+                                  00003ec4        3f   func ,g         * 
+  _GetVacuumLevel
+                                  00003f03        9d   func ,g         * 
+FILE=DefaultBuild\sysmode.obj
+                                  00003fa0  00004cf8       d59
+  _mainSystemMode
+                                  00003fa0        82   func ,g         * 
+  _sysSoftVersionMode
+                                  00004022       146   func ,g         * 
+  _sysAnalogAdjustMode
+                                  00004168       189   func ,g         * 
+  _sysAnalogAdjustAuto
+                                  000042f1       1f3   func ,g         * 
+  _sysPanelTestMode
+                                  000044e4       1c3   func ,g         * 
+  _sysInputTestMode
+                                  000046a7        72   func ,g         * 
+  _sysGetVacuumLevel
+                                  00004719       13b   func ,g         * 
+  _sysOutputTestMode
+                                  00004854       129   func ,g         * 
+  _sysRamClearMode
+                                  0000497d        11   func ,g         * 
+  _sysErrorLogMode
+                                  0000498e       148   func ,g         * 
+  _sysPumpTimeMode
+                                  00004ad6        72   func ,g         * 
+  _sysGetPumpTime
+                                  00004b48        d2   func ,g         * 
+  _sys7SegLedAllOff
+                                  00004c1a        25   func ,g         * 
+  _sysLedAllOff
+                                  00004c3f        1f   func ,g         * 
+  _sys7SegLedAllOn
+                                  00004c5e        27   func ,g         * 
+  _sysLedAllOn
+                                  00004c85        1f   func ,g         * 
+  _R_ADC_Get_Result2
+                                  00004ca4         9   func ,g         * 
+  _sysFlashWrite
+                                  00004cad        21   func ,g         * 
+  _sysVacuumStart
+                                  00004cce        2b   func ,g         * 
+FILE=DefaultBuild\warm.obj
+                                  00004cf9  00004ee4       1ec
+  _mainWarmMode
+                                  00004cf9        16   func ,g         * 
+  _mainWarmDrive
+                                  00004d0f        df   func ,g         * 
+  _mainWarmStart
+                                  00004dee        67   func ,g         * 
+  _mainWarmEnd
+                                  00004e55        90   func ,g         * 
+FILE=DefaultBuild\course.obj
+                                  00004ee5  00004ee5         1
+  _mainCourseMode
+                                  00004ee5         1   func ,g         * 
+FILE=DefaultBuild\stiInt.obj
+                                  00004ee6  000058a2       9bd
+  _stiIntMain
+                                  00004ee6        40   func ,g         * 
+  _GlobalTimerReneal
+                                  00004f26       122   func ,g         * 
+  _powerOn_GuruGuru7Seg
+                                  00005048        7c   func ,g         * 
+  _stiInKey
+                                  000050c4        ed   func ,g         * 
+  _stiChkLEDCOM
+                                  000051b1       2a5   func ,g         * 
+  _iodInKey
+                                  00005456        2c   func ,g         * 
+  _stiReadSamplingADC
+                                  00005482        95   func ,g         * 
+  _stiInitialSamplingADC
+                                  00005517        2b   func ,g         * 
+  _stiCheckPump
+                                  00005542        46   func ,g         * 
+  _stiCheckPumpthermal
+                                  00005588        41   func ,g         * 
+  _stiPowerSwCheck
+                                  000055c9        4d   func ,g         * 
+  _stiPowerSwLong
+                                  00005616        23   func ,g         * 
+  _powerLedControl
+                                  00005639        50   func ,g         * 
+  _stiPowerLedOut
+                                  00005689        a6   func ,g         * 
+  _ledControl_Course
+                                  0000572f        7c   func ,g         * 
+  _ledControl_Proc
+                                  000057ab        7c   func ,g         * 
+  _ledControl_Sec
+                                  00005827        7c   func ,g         * 
+FILE=DefaultBuild\mainSVC.obj
+                                  000058a3  00006db5      1513
+  _mainSVC
+                                  000058a3        d8   func ,g         * 
+  _mainVacuumElectromangCheck
+                                  0000597b        1e   func ,g         * 
+  _mainWaitMode
+                                  00005999       458   func ,g         * 
+  _mainPackCountDisplay_Start
+                                  00005df1        7a   func ,g         * 
+  _mainPackCountDisplay_End
+                                  00005e6b        75   func ,g         * 
+  _mcmSetSystemData
+                                  00005ee0       296   func ,g         * 
+  _mcmSetLed
+                                  00006176        7f   func ,g         * 
+  _mainErrorMode
+                                  000061f5       1e3   func ,g         * 
+  _mainStanbyMode
+                                  000063d8        98   func ,g         * 
+  _mainStanbyCheck
+                                  00006470        4d   func ,g         * 
+  _mainStartVacuum
+                                  000064bd        4a   func ,g         * 
+  _glbGetReadKey
+                                  00006507        83   func ,g         * 
+  _glbWaitKeyOff
+                                  0000658a        62   func ,g         * 
+  _glbWaitKeyOn
+                                  000065ec        44   func ,g         * 
+  _mainDisplay7Seg
+                                  00006630        1d   func ,g         * 
+  _mainDisplayWarning7Seg
+                                  0000664d         d   func ,g         * 
+  _glbGetDipSW
+                                  0000665a        91   func ,g         * 
+  _mainPortOutputInitial
+                                  000066eb        84   func ,g         * 
+  _mainGlobalClear
+                                  0000676f        d2   func ,g         * 
+  _mcmLocalClear
+                                  00006841        21   func ,g         * 
+  _mcmFlashDataRead
+                                  00006862        f4   func ,g         * 
+  _mcmFlashDataInitial
+                                  00006956        30   func ,g         * 
+  _mcmFlashInitialClear
+                                  00006986        ea   func ,g         * 
+  _mcmDataSettingRangeCheck
+                                  00006a70       13f   func ,g         * 
+  _mcmStartBuzzer
+                                  00006baf        19   func ,g         * 
+  _mcmFlashWriteCheck
+                                  00006bc8        4f   func ,g         * 
+  _mainCheckPumpthermal
+                                  00006c17        49   func ,g         * 
+  _mcmSetBuzzerEffective
+                                  00006c60         7   func ,g         * 
+  _mcmSetBuzzerInvalid
+                                  00006c67         7   func ,g         * 
+  _mcmSetBuzzerEnd
+                                  00006c6e        22   func ,g         * 
+  _mcmSetBuzzerError
+                                  00006c90        22   func ,g         * 
+  _mcmBuzzerOff
+                                  00006cb2        1f   func ,g         * 
+  _mcmWaitTimer
+                                  00006cd1        1f   func ,g         * 
+  _mcmCheckDrawerOpenToClose
+                                  00006cf0        2a   func ,g         * 
+  _mcmCheckVacuumSensorError
+                                  00006d1a        9c   func ,g         * 
+FILE=DefaultBuild\r_cg_pfdl.obj
+                                  00006db6  00006f21       16c
+  _R_FDL_Create
+                                  00006db6         8   func ,g         * 
+  _R_FDL_Write
+                                  00006dbe        4c   func ,g         * 
+  _R_FDL_Read
+                                  00006e0a        3a   func ,g         * 
+  _R_FDL_Erase
+                                  00006e44        3c   func ,g         * 
+  _R_FDL_Open
+                                  00006e80        12   func ,g         * 
+  _R_FDL_Close
+                                  00006e92         8   func ,g         * 
+  _R_FDL_BlankCheck
+                                  00006e9a        44   func ,g         * 
+  _R_FDL_IVerify
+                                  00006ede        44   func ,g         * 
+FILE=DefaultBuild\pdfl_user.obj
+                                  00006f22  000074ec       5cb
+  _calcFlashCheckSum
+                                  00006f22        56   func ,g         * 
+  _pdlWriteFlash
+                                  00006f78       232   func ,g         * 
+  _pdlReadFlash
+                                  000071aa       239   func ,g         * 
+  _pldVerifyCheck
+                                  000073e3        66   func ,g         * 
+  _pldCopyBackupData
+                                  00007449        52   func ,g         * 
+  _pldRestoreBackupData
+                                  0000749b        52   func ,g         * 
+FILE=DefaultBuild\r_cg_wdt.obj
+                                  000074ed  00007500        14
+  _R_WDT_Create
+                                  000074ed        10   func ,g         * 
+  _R_WDT_Restart
+                                  000074fd         4   func ,g         * 
+FILE=DefaultBuild\r_cg_lvd.obj
+                                  00007501  00007514        14
+  _R_LVD_Create
+                                  00007501         d   func ,g         * 
+  _R_LVD_InterruptMode_Start
+                                  0000750e         7   func ,g         * 
+
+SECTION=.data
+FILE=DefaultBuild\vacume.obj
+                                  00007516  00007559        44
+FILE=DefaultBuild\glbRam.obj
+                                  0000755a  0000755c         3
+FILE=DefaultBuild\sysmode.obj
+                                  0000755e  000075ae        51
+FILE=DefaultBuild\warm.obj
+                                  000075b0  000075b3         4
+FILE=DefaultBuild\stiInt.obj
+                                  000075b4  000075f0        3d
+FILE=DefaultBuild\mainSVC.obj
+                                  000075f2  0000761f        2e
+FILE=DefaultBuild\pdfl_user.obj
+                                  00007620  0000766f        50
+
+SECTION=PFDL_COD
+FILE=pfdl
+                                  00007670  000076fd        8e
+  _PFDL_Open
+                                  00007670         0   none ,g         * 
+  PFDL_Open
+                                  00007670         0   none ,g         * 
+  _PFDL_Execute
+                                  0000768b         0   none ,g         * 
+  PFDL_Execute
+                                  0000768b         0   none ,g         * 
+  PFDL_Execute_firmware
+                                  000076c1         0   none ,l         * 
+  PFDL_Execute_erase
+                                  000076cb         0   none ,l         * 
+  PFDL_Execute_read
+                                  000076dc         0   none ,l         * 
+  PFDL_Execute_read_next
+                                  000076e0         0   none ,l         * 
+  PFDL_Execute_exit
+                                  000076eb         0   none ,l         * 
+  _PFDL_Handler
+                                  000076ec         0   none ,g         * 
+  PFDL_Handler
+                                  000076ec         0   none ,g         * 
+  _PFDL_Close
+                                  000076f2         0   none ,g         * 
+  PFDL_Close
+                                  000076f2         0   none ,g         * 
+
+SECTION=.monitor2
+FILE=rlink_generates_02
+                                  0003fe00  0003ffff       200
+
+SECTION=.dataR
+FILE=DefaultBuild\vacume.obj
+                                  000faf88  000fafcb        44
+  _geefBfCourseDataMaxMin
+                                  000faf88        20   data ,g         * 
+  _DriveProcTbl
+                                  000fafa8        24   data ,g         * 
+FILE=DefaultBuild\glbRam.obj
+                                  000fafcc  000fafce         3
+  _stiCtKey
+                                  000fafcc         1   data ,g         * 
+  _ctTest
+                                  000fafcd         1   data ,g         * 
+  _ctTest2
+                                  000fafce         1   data ,g         * 
+FILE=DefaultBuild\sysmode.obj
+                                  000fafd0  000fb020        51
+  _sysProcTbl
+                                  000fafd0        20   data ,g         * 
+  _DipSwToIndexTBL
+                                  000faff0        10   data ,g         * 
+  _sysOutputTest
+                                  000fb000        20   data ,g         * 
+  _turnFl@1@sysSoftVersionMode
+                                  000fb020         1   data ,l         * 
+FILE=DefaultBuild\warm.obj
+                                  000fb022  000fb025         4
+  _WarmProcTbl
+                                  000fb022         4   data ,g         * 
+FILE=DefaultBuild\stiInt.obj
+                                  000fb026  000fb062        3d
+  _stiCtP124
+                                  000fb026         4   data ,g         * 
+  _stiCtP124Check
+                                  000fb02a         4   data ,g         * 
+  _stiCtChildError
+                                  000fb02e         4   data ,g         * 
+  _LedCom
+                                  000fb032        10   data ,g         * 
+  _stiDt7Seg
+                                  000fb042        13   data ,g         * 
+  _stiDtBit
+                                  000fb055         a   data ,g         * 
+  _stiLedOut_Com2
+                                  000fb05f         1   data ,g         * 
+  _stiLedOut_Com3
+                                  000fb060         1   data ,g         * 
+  _stiLedOut_Com3_Sec
+                                  000fb061         1   data ,g         * 
+  _stiGuruGuruFlag
+                                  000fb062         1   data ,g         * 
+FILE=DefaultBuild\mainSVC.obj
+                                  000fb064  000fb091        2e
+  _mainDtBit
+                                  000fb064         a   data ,g         * 
+  _mainTblError
+                                  000fb06e         8   data ,g         * 
+  _mainProcTbl
+                                  000fb076        1c   data ,g         * 
+FILE=DefaultBuild\pdfl_user.obj
+                                  000fb092  000fb0e1        50
+  _dataFlashTbl
+                                  000fb092        28   data ,g         * 
+  _dataFlashTbl_Base
+                                  000fb0ba        28   data ,g         * 
+
+SECTION=.bss
+FILE=DefaultBuild\vacume.obj
+                                  000fb0e2  000fb0e8         7
+  _vacFlHeaterBlock
+                                  000fb0e2         1   data ,g         * 
+  _glbFlSaveVacuumType
+                                  000fb0e3         1   data ,g         * 
+  _vacCtStartAdLevel
+                                  000fb0e4         2   data ,g         * 
+  _vacFlEndAdLevel
+                                  000fb0e6         1   data ,g         * 
+  _vacFlRestart
+                                  000fb0e7         1   data ,g         * 
+  _vacFlAbnormalEnd
+                                  000fb0e8         1   data ,g         * 
+FILE=DefaultBuild\geefFlash.obj
+                                  000fb0ea  000fb19b        b2
+  _geefFlFixData
+                                  000fb0ea         2   data ,g         * 
+  _geefFlCourse
+                                  000fb0ec         1   data ,g         * 
+  _geefFlVacuumType
+                                  000fb0ed         4   data ,g         * 
+  _geefCtAnalogAdjust
+                                  000fb0f2         2   data ,g         * 
+  _geefBfErrorHistory
+                                  000fb0f4        14   data ,g         * 
+  _geefBfCourseData
+                                  000fb108        20   data ,g         * 
+  _geefFlCheckSum
+                                  000fb128         1   data ,g         * 
+  _geefCtPumpRunning
+                                  000fb12a         4   data ,g         * 
+  _geefBfSystemData
+                                  000fb12e         f   data ,g         * 
+  _geefCtPack
+                                  000fb13e         4   data ,g         * 
+  _geefFlFixEndData
+                                  000fb142         2   data ,g         * 
+  _geefFlFixData_Base
+                                  000fb144         2   data ,g         * 
+  _geefFlCourse_Base
+                                  000fb146         1   data ,g         * 
+  _geefFlVacuumType_Base
+                                  000fb147         4   data ,g         * 
+  _geefCtAnalogAdjust_Base
+                                  000fb14c         2   data ,g         * 
+  _geefBfErrorHistory_Base
+                                  000fb14e        14   data ,g         * 
+  _geefBfCourseData_Base
+                                  000fb162        20   data ,g         * 
+  _geefCtPumpRunning_Base
+                                  000fb182         4   data ,g         * 
+  _geefBfSystemData_Base
+                                  000fb186         f   data ,g         * 
+  _geefCtPack_Base
+                                  000fb196         4   data ,g         * 
+  _geefFlFixEndData_Base
+                                  000fb19a         2   data ,g         * 
+FILE=DefaultBuild\glbRam.obj
+                                  000fb19c  000fb21a        7f
+  _glbFlReqDot
+                                  000fb19c         1   data ,g         * 
+  _glbFlLedCom
+                                  000fb19d         1   data ,g         * 
+  _glbCtKeyOffTimer
+                                  000fb19e         2   data ,g         * 
+  _glbFlKydt
+                                  000fb1a0         1   data ,g         * 
+  _glbFlMainMode
+                                  000fb1a1         1   data ,g         * 
+  _glbDt7Seg2
+                                  000fb1a2         1   data ,g         * 
+  _glbDt7Seg1
+                                  000fb1a3         1   data ,g         * 
+  _glbFlDipSW
+                                  000fb1a4         1   data ,g         * 
+  _glbFlSoftOpen
+                                  000fb1a5         1   data ,g         * 
+  _glbFlSysytem7Seg
+                                  000fb1a6         1   data ,g         * 
+  _glbFlSystemMode
+                                  000fb1a7         1   data ,g         * 
+  _glbFlVacuumElectromangReq
+                                  000fb1a8         1   data ,g         * 
+  _glbFlSysHeaterReq
+                                  000fb1a9         1   data ,g         * 
+  _glbFlVaccumeTips
+                                  000fb1aa         1   data ,g         * 
+  _glbFlWarmCansel
+                                  000fb1ab         1   data ,g         * 
+  _glbFlProcError
+                                  000fb1ac         1   data ,g         * 
+  _glbCtVacuumElectromang
+                                  000fb1ae         2   data ,g         * 
+  _glbCtHeaterBlockTimer
+                                  000fb1b0         2   data ,g         * 
+  _glbCtWarmTimer
+                                  000fb1b2         4   data ,g         * 
+  _glbFlDriveMode
+                                  000fb1b6         1   data ,g         * 
+  _geefFlVacuumeDisp
+                                  000fb1b7         1   data ,g         * 
+  _glbCtDriveTimer
+                                  000fb1b8         4   data ,g         * 
+  _glbCtGusInclusionTimer
+                                  000fb1bc         2   data ,g         * 
+  _glbCtVacuumEmergncyTimer
+                                  000fb1be         2   data ,g         * 
+  _glbCtGusStubilityTimer
+                                  000fb1c0         2   data ,g         * 
+  _glbCtSeelTimer
+                                  000fb1c2         2   data ,g         * 
+  _glbCtSeelCoolingTimer
+                                  000fb1c4         2   data ,g         * 
+  _glbCtSoftReleaseTimer
+                                  000fb1c6         2   data ,g         * 
+  _glbCtSysHeaterOffTimer
+                                  000fb1c8         2   data ,g         * 
+  _glbCtFunTimer
+                                  000fb1ca         2   data ,g         * 
+  _glbCtVacuumeWarm
+                                  000fb1cc         2   data ,g         * 
+  _glbFlProc
+                                  000fb1ce         2   data ,g         * 
+  _glbCtVacuumTimeout1
+                                  000fb1d0         2   data ,g         * 
+  _glbCtVacuumTimeout2
+                                  000fb1d2         2   data ,g         * 
+  _glbCtVacuumTimeout3
+                                  000fb1d4         2   data ,g         * 
+  _glbCtWaitTimerT5
+                                  000fb1d6         2   data ,g         * 
+  _glbCntPowerSwOffChk
+                                  000fb1d8         2   data ,g         * 
+  _glbCntPowerSwOnChk
+                                  000fb1da         2   data ,g         * 
+  _glbFlPowerSw
+                                  000fb1dc         2   data ,g         * 
+  _glbCntPowerSwLongChk
+                                  000fb1de         2   data ,g         * 
+  _glbFlPowerSwLong
+                                  000fb1e0         2   data ,g         * 
+  _glbFlPowerSwLongPalse
+                                  000fb1e2         2   data ,g         * 
+  _glbFlStanby
+                                  000fb1e4         2   data ,g         * 
+  _glbPowerLed
+                                  000fb1e6         1   data ,g         * 
+  _glbPowerLedBlinkTogle
+                                  000fb1e7         1   data ,g         * 
+  _glbCntPowerLedBlink_onTime
+                                  000fb1e8         2   data ,g         * 
+  _glbCntSetPowerLedBlink_onTime
+                                  000fb1ea         2   data ,g         * 
+  _glbCntPowerLedBlink_offTime
+                                  000fb1ec         2   data ,g         * 
+  _glbCntSetPowerLedBlink_offTime
+                                  000fb1ee         2   data ,g         * 
+  _glbCtWaitTimerE6Cansel
+                                  000fb1f0         2   data ,g         * 
+  _glbCtOutputTimer
+                                  000fb1f2         2   data ,g         * 
+  _glbFlError
+                                  000fb1f4         1   data ,g         * 
+  _glbCtBuzzerOnTimer
+                                  000fb1f6         2   data ,g         * 
+  _glbCtBuzzerOffTimer
+                                  000fb1f8         2   data ,g         * 
+  _glbCtWaitTimer
+                                  000fb1fa         2   data ,g         * 
+  _glbFlFunReq
+                                  000fb1fc         1   data ,g         * 
+  _glbCtIntTimer
+                                  000fb1fe         2   data ,g         * 
+  _glbCtRealAD
+                                  000fb200         2   data ,g         * 
+  _glbFlSaveMode
+                                  000fb202         1   data ,g         * 
+  _glbFlVacuumWarning
+                                  000fb203         1   data ,g         * 
+  _glbFlContinue
+                                  000fb204         1   data ,g         * 
+  _glbFlSecLevel
+                                  000fb205         1   data ,g         * 
+  _glbFlMainSystem
+                                  000fb206         1   data ,g         * 
+  _glbFlAdjust
+                                  000fb207         1   data ,g         * 
+  _glbFlWriteModeCN7
+                                  000fb208         1   data ,g         * 
+  _glbFlReadModeCN4
+                                  000fb209         1   data ,g         * 
+  _glbFlGetACK
+                                  000fb20a         1   data ,g         * 
+  _glbFlGetENQ
+                                  000fb20b         1   data ,g         * 
+  _glbFlConnection
+                                  000fb20c         1   data ,g         * 
+  _glbFlReserveMode
+                                  000fb20d         1   data ,g         * 
+  _glbFlChildStartReq
+                                  000fb20e         1   data ,g         * 
+  _glbFlLed11
+                                  000fb20f         1   data ,g         * 
+  _glbFlChildBusy
+                                  000fb210         1   data ,g         * 
+  _glbFlWarmMode
+                                  000fb211         1   data ,g         * 
+  _glbCtCN4Timer
+                                  000fb212         4   data ,g         * 
+  _glbFlPackCountDisplay_Start
+                                  000fb216         1   data ,g         * 
+  _glbCtPackCountDisplayTime
+                                  000fb218         2   data ,g         * 
+  _glbFlLedCourse
+                                  000fb21a         1   data ,g         * 
+FILE=DefaultBuild\sysmode.obj
+                                  000fb21c  000fb21d         2
+  _sysFlMode
+                                  000fb21c         1   data ,g         * 
+  _sysFlCourse
+                                  000fb21d         1   data ,g         * 
+FILE=DefaultBuild\stiInt.obj
+                                  000fb21e  000fb239        1c
+  _stiFlKydt
+                                  000fb21e         1   data ,g         * 
+  _stiFlFlashing
+                                  000fb21f         1   data ,g         * 
+  _stiCtFlashing
+                                  000fb220         2   data ,g         * 
+  _stiFlFlashing2
+                                  000fb222         1   data ,g         * 
+  _stiCtFlashing2
+                                  000fb224         2   data ,g         * 
+  _stiFlFlashing3
+                                  000fb226         1   data ,g         * 
+  _stiCtFlashing3
+                                  000fb228         2   data ,g         * 
+  _stiFlFlashing4
+                                  000fb22a         1   data ,g         * 
+  _stiCtFlashing4
+                                  000fb22c         2   data ,g         * 
+  _stiBfAdc
+                                  000fb22e         8   data ,g         * 
+  _stiCtMinute
+                                  000fb236         2   data ,g         * 
+  _Data_GuruGuru7Seg
+                                  000fb238         2   data ,g         * 
+FILE=DefaultBuild\mainSVC.obj
+                                  000fb23a  000fb23b         2
+  _mainFlDrawer
+                                  000fb23a         1   data ,g         * 
+  _mainFlPackCountDisplay_Busy
+                                  000fb23b         1   data ,g         * 
+FILE=DefaultBuild\r_cg_pfdl.obj
+                                  000fb23c  000fb248         d
+  _gFdlResult
+                                  000fb23c         1   data ,g         * 
+  _gFdlReq
+                                  000fb23e         8   data ,g         * 
+  _gFdlDesc
+                                  000fb246         2   data ,g         * 
+  _gFdlStatus
+                                  000fb248         1   data ,g         * 
+
+Absolute value symbols
+FILE=rlink_generates_05
+  __s.text
+                                  0000309a         0   none ,g         * 
+  __e.text
+                                  00003218         0   none ,g         * 
+  __s.textf
+                                  0000336c         0   none ,g         * 
+  __e.textf
+                                  00007515         0   none ,g         * 
+  __s.const
+                                  00003000         0   none ,g         * 
+  __e.const
+                                  0000309a         0   none ,g         * 
+  __s.constf
+                                  00007516         0   none ,g         * 
+  __e.constf
+                                  00007516         0   none ,g         * 
+  __s.data
+                                  00007516         0   none ,g         * 
+  __e.data
+                                  00007670         0   none ,g         * 
+  __s.sdata
+                                  00007670         0   none ,g         * 
+  __e.sdata
+                                  00007670         0   none ,g         * 
+  __s.bss
+                                  000fb0e2         0   none ,g         * 
+  __e.bss
+                                  000fb249         0   none ,g         * 
+  __s.sbss
+                                  000ffe20         0   none ,g         * 
+  __e.sbss
+                                  000ffe20         0   none ,g         * 
+  __s.dataR
+                                  000faf88         0   none ,g         * 
+  __e.dataR
+                                  000fb0e2         0   none ,g         * 
+  __s.sdataR
+                                  000ffe20         0   none ,g         * 
+  __e.sdataR
+                                  000ffe20         0   none ,g         * 
+  __s.RLIB
+                                  00003218         0   none ,g         * 
+  __e.RLIB
+                                  0000336c         0   none ,g         * 
+  __s.SLIB
+                                  0000336c         0   none ,g         * 
+  __e.SLIB
+                                  0000336c         0   none ,g         * 
+  __sPFDL_COD
+                                  00007670         0   none ,g         * 
+  __ePFDL_COD
+                                  000076fe         0   none ,g         * 
+  __s.option_byte
+                                  000000c0         0   none ,g         * 
+  __e.option_byte
+                                  000000c4         0   none ,g         * 
+  __s.monitor1
+                                  000000ce         0   none ,g         * 
+  __e.monitor1
+                                  000000d8         0   none ,g         * 
+  __s.monitor2
+                                  0003fe00         0   none ,g         * 
+  __e.monitor2
+                                  00040000         0   none ,g         * 
+  __s.security_id
+                                  000000c4         0   none ,g         * 
+  __e.security_id
+                                  000000ce         0   none ,g         * 
+  __s.vect
+                                  00000000         0   none ,g         * 
+  __e.vect
+                                  00000080         0   none ,g         * 
+  __RAM_ADDR_START
+                                  000faf00         0   none ,g         * 
+  __RAM_ADDR_END
+                                  000ffee0         0   none ,g         * 
+  __STACK_ADDR_START
+                                  000ffe20         0   none ,g         * 
+  __STACK_ADDR_END
+                                  000fb24a         0   none ,g         * 
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
